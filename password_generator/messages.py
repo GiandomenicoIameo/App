@@ -21,15 +21,3 @@ def message_alphabet():
 def message_word():
     message = "custom password."
     return message
-
-def message( msg ):
-
-    arguments = {
-        "-a"  : message_alphabet(),
-        "-b"  : message_binomial(),
-        "-c"  : message_combination(),
-        "-d"  : message_disposition(),
-        "-p"  : message_permutation(),
-        "-w"  : message_word()
-    }
-    return arguments.get( msg, "null" )

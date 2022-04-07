@@ -1,55 +1,56 @@
 import argparse
-from messages import message
+from messages import *
 
 version = {
-    "short_name"  : "-v",
-    "full_name"   : "--version",
+    "name"        : "version",
+    "shortcut"    : "-v",
+    "command"     : "--version",
     "action"      : "version",
     "description" : "verba version 1.0.0"
 }
 
 binomial = {
     "name"        : "binomial",
-    "short_name"  : "-b",
-    "full_name"   : "--binomial",
-    "help"        : message( "-b" ),
+    "shortcut"    : "-b",
+    "command"     : "--binomial",
+    "help"        : message_binomial(),
     "action"      : "store_true"
 }
 
 combination = {
     "name"        : "combination",
-    "short_name"  : "-c",
-    "full_name"   : "--combination",
-    "help"        : message( "-c" ),
+    "shortcut"    : "-c",
+    "command"     : "--combination",
+    "help"        : message_combination(),
     "action"      : "store_true"
 }
 
 disposition = {
-    "name"        : 'disposition',
-    "short_name"  : "-d",
-    "full_name"   : "--disposition",
-    "help"        : message( "-d" ),
+    "name"        : "disposition",
+    "shortcut"    : "-d",
+    "command"     : "--disposition",
+    "help"        : message_disposition(),
     "action"      : "store_true"
 }
 
 permutation = {
-    "name"        : 'permutation',
-    "short_name"  : "-p",
-    "full_name"   : "--permutation",
-    "help"        : message( "-p" ),
+    "name"        : "permutation",
+    "shortcut"    : "-p",
+    "command"     : "--permutation",
+    "help"        : message_permutation(),
     "action"      : "store_true"
 }
 
 alphabet = {
-    "full_name"   : "--alphabet",
+    "command"     : "--alphabet",
     "require"     : True,
-    "help"        : message( "-a" )
+    "help"        : message_alphabet()
 }
 
 word = {
     "name"        : "word",
     "nargs"       : "?",
-    "help"        : message( "-w" )
+    "help"        : message_word()
 }
 
 parser = argparse.ArgumentParser()
@@ -61,42 +62,42 @@ parser.add_argument(
 )
 
 parser.add_argument(
-           version[ "short_name" ],
-           version[ "full_name" ],
+           version[ "shortcut" ],
+           version[ "command" ],
   action = version[ "action" ],
  version = version[ "description" ]
 )
 
 parser.add_argument(
-           binomial[ "short_name" ],
-           binomial[ "full_name" ],
+           binomial[ "shortcut" ],
+           binomial[ "command" ],
     help = binomial[ "help" ],
   action = binomial[ "action" ]
 )
 
 parser.add_argument(
-           combination[ "short_name" ],
-           combination[ "full_name" ],
+           combination[ "shortcut" ],
+           combination[ "command" ],
     help = combination[ "help" ],
   action = combination[ "action" ]
 )
 
 parser.add_argument(
-           disposition[ "short_name" ],
-           disposition[ "full_name" ],
+           disposition[ "shortcut" ],
+           disposition[ "command" ],
     help = disposition[ "help" ],
   action = disposition[ "action" ]
 )
 
 parser.add_argument(
-           permutation[ "short_name" ],
-           permutation[ "full_name" ],
+           permutation[ "shortcut" ],
+           permutation[ "command" ],
     help = permutation[ "help" ],
   action = permutation[ "action" ]
 )
 
 parser.add_argument(
-           alphabet[ "full_name" ],
+           alphabet[ "command" ],
 required = alphabet[ "require" ],
     help = alphabet[ "help" ]
  )
