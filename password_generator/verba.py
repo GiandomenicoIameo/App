@@ -1,25 +1,11 @@
 from parsing import *
 from predicates import *
 
-match True:
- case args.binomial:
-        mode = "binomial"
- case args.combination:
-        mode = "combination"
- case args.disposition:
-        mode = "disposition"
- case args.permutation:
-        mode = "permutation"
- case _:
-        mode = "permutation"
-
-alphabet = list( args.alphabet )
-
-if bool( args.word ):
-    password_found(
-        mode, alphabet
-    )
+if args.binomial:
+    restore_password( "binomial" )
+elif args.combination:
+    restore_password( "combination" )
+elif args.disposition:
+    restore_password( "disposition" )
 else:
-    password_not_found(
-        mode, alphabet
-    )
+    restore_password( "permutation" )

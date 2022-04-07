@@ -1,13 +1,26 @@
 from pyswip import Prolog, Functor, Variable, Query
 from parsing import *
 
+def restore_password( mode ):
+
+    alphabet = list( args.alphabet )
+
+    if bool( args.password ):
+        password_found(
+            mode, alphabet
+        )
+    else:
+        password_not_found(
+            mode, alphabet
+        )
+
 def password_not_found( mode, alphabet ):
 
     prolog = Prolog()
     prolog.consult( "combinatorics.pro" )
 
-    mode  = Functor( mode, 2 )
-    atom  = Functor( "atomics", 2 )
+    mode = Functor( mode, 2 )
+    atom = Functor( "atomic_list_concat", 2 )
 
     X = Variable()
     Y = Variable()
@@ -23,7 +36,7 @@ def password_found( mode, alphabet ):
     prolog = Prolog()
     prolog.consult( "combinatorics.pro" )
 
-    toString = list( args.word.strip() )
+    toString = list( args.password.strip() )
     separator = ","
     toString = "[" + separator.join( toString ) + "]"
 
