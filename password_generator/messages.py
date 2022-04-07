@@ -18,6 +18,6 @@ def message_alphabet():
     message = "font alphabet."
     return message
 
-def message_word():
+def message_password():
     message = "custom password."
     return message

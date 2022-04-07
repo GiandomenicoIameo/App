@@ -47,18 +47,18 @@ alphabet = {
     "help"        : message_alphabet()
 }
 
-word = {
-    "name"        : "word",
+password = {
+    "name"        : "password",
     "nargs"       : "?",
-    "help"        : message_word()
+    "help"        : message_password()
 }
 
 parser = argparse.ArgumentParser()
 
 parser.add_argument(
-           word[ "name" ],
-   nargs = word[ "nargs" ],
-    help = word[ "help" ]
+           password[ "name" ],
+   nargs = password[ "nargs" ],
+    help = password[ "help" ]
 )
 
 parser.add_argument(
