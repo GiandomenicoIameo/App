@@ -15,11 +15,9 @@ match True:
 
 alphabet = list( args.alphabet )
 
-if bool( args.word ) == False:
-    password_not_found(
-        mode, alphabet
-    )
-else:
+if bool( args.word ):
     password_found(
-        mode, alphabet
-    )
+        mode, alphabet )
+else:
+    password_not_found(
+        mode, alphabet )
