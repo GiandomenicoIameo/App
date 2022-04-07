@@ -2,15 +2,15 @@ from parsing import *
 from predicates import *
 
 match True:
-  case args.binomial:
+ case args.binomial:
         mode = "binomial"
-  case args.combination:
+ case args.combination:
         mode = "combination"
-  case args.disposition:
+ case args.disposition:
         mode = "disposition"
-  case args.permutation:
+ case args.permutation:
         mode = "permutation"
-  case _:
+ case _:
         mode = "permutation"
 
 alphabet = list( args.alphabet )
