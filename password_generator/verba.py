@@ -16,10 +16,10 @@ match True:
 alphabet = list( args.alphabet )
 
 if bool( args.word ) == False:
-    password_found(
+    password_not_found(
         mode, alphabet
     )
 else:
-    password_not_found(
+    password_found(
         mode, alphabet
     )
