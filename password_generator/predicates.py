@@ -1,4 +1,5 @@
 from pyswip import Prolog, Functor, Variable, Query
+from parsing import *
 
 def password_found( mode, alphabet ):
 
