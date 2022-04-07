@@ -1,5 +1,5 @@
 import argparse
-from messages import *
+from instructions import *
 
 version = {
     "name"        : "version",
