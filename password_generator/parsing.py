@@ -64,7 +64,7 @@ parser.add_argument(
            version[ "short_name" ],
            version[ "full_name" ],
   action = version[ "action" ],
- version = version[ 'description' ]
+ version = version[ ‘description' ]
 )
 
 parser.add_argument(
