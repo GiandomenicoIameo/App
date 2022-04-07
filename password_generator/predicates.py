@@ -1,7 +1,7 @@
 from pyswip import Prolog, Functor, Variable, Query
 from parsing import *
 
-def password_found( mode, alphabet ):
+def password_not_found( mode, alphabet ):
 
     prolog = Prolog()
     prolog.consult( "combinatorics.pro" )
@@ -18,7 +18,7 @@ def password_found( mode, alphabet ):
           print( Y.value )
     query.closeQuery()
 
-def password_not_found( mode, alphabet ):
+def password_found( mode, alphabet ):
 
     prolog = Prolog()
     prolog.consult( "combinatorics.pro" )
