@@ -20,6 +20,11 @@ match True:
 alphabet = list( args.alphabet )
 
 if bool( args.word ) == False:
-    password_found( mode, alphabet )
+    password_found(
+        mode, alphabet
+    )
 else:
-    password_not_found( mode, alphabet, args, prolog )
+    password_not_found(
+        mode, alphabet,
+        args, prolog
+    )
