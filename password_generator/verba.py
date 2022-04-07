@@ -1,4 +1,4 @@
-from predicates import *
+from predicates import combinatorial_password
 
 if args.binomial:
     combinatorial_password( "binomial" )
