@@ -2,10 +2,10 @@ from parsing import *
 from predicates import *
 
 if args.binomial:
-    restore_password( "binomial" )
+    combinatorial_password( "binomial" )
 elif args.combination:
-    restore_password( "combination" )
+    combinatorial_password( "combination" )
 elif args.disposition:
-    restore_password( "disposition" )
+    combinatorial_password( "disposition" )
 else:
-    restore_password( "permutation" )
+    combinatorial_password( "permutation" )
