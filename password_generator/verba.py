@@ -1,4 +1,3 @@
-from parsing import *
 from predicates import *
 
 if args.binomial:
