@@ -26,11 +26,11 @@ def message_word():
 def message( msg ):
 
     arguments = {
-        "-a"  : message_member(),
+        "-a"  : message_alphabet(),
         "-b"  : message_binomial(),
         "-c"  : message_combination(),
         "-d"  : message_disposition(),
         "-p"  : message_permutation(),
-        "-w"  : message_alphabet()
+        "-w"  : message_word()
     }
     return arguments.get( msg, "null" )
