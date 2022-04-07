@@ -18,7 +18,7 @@ def password_not_found( mode, alphabet, args, prolog ):
 
     toString = list( args.word.strip() )
     separator = ","
-    toString = "[" + topics.join( toString ) + "]"
+    toString = "[" + separator.join( toString ) + "]"
 
     schedule = [
         str( alphabet ),mode,
