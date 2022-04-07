@@ -15,7 +15,7 @@ def message_binomial():
     message = "generate all subsets of a given set."
     return message
 
-def message_member():
+def message_alphabet():
     message = "font alphabet."
     return message
 
@@ -31,6 +31,6 @@ def message( msg ):
         "-c"  : message_combination(),
         "-d"  : message_disposition(),
         "-p"  : message_permutation(),
-        "-w"  : message_word()
+        "-w"  : message_alphabet()
     }
     return arguments.get( msg, "null" )
