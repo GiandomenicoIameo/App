@@ -2,55 +2,55 @@ import argparse
 from instructions import *
 
 version = {
-    "name"        : "version",
-    "shortcut"    : "-v",
-    "command"     : "--version",
-    "action"      : "version",
-    "description" : "verba version 1.0.0"
+    "name"      : "version",
+    "shortcut"  : "-v",
+    "command"   : "--version",
+    "action"    : "version",
+    "script"    : "verba version 1.0.0"
 }
 
 binomial = {
-    "name"        : "binomial",
-    "shortcut"    : "-b",
-    "command"     : "--binomial",
-    "help"        : message_binomial(),
-    "action"      : "store_true"
+    "name"      : "binomial",
+    "shortcut"  : "-b",
+    "command"   : "--binomial",
+    "help"      : message_binomial(),
+    "action"    : "store_true"
 }
 
 combination = {
-    "name"        : "combination",
-    "shortcut"    : "-c",
-    "command"     : "--combination",
-    "help"        : message_combination(),
-    "action"      : "store_true"
+    "name"      : "combination",
+    "shortcut"  : "-c",
+    "command"   : "--combination",
+    "help"      : message_combination(),
+    "action"    : "store_true"
 }
 
 disposition = {
-    "name"        : "disposition",
-    "shortcut"    : "-d",
-    "command"     : "--disposition",
-    "help"        : message_disposition(),
-    "action"      : "store_true"
+    "name"      : "disposition",
+    "shortcut"  : "-d",
+    "command"   : "--disposition",
+    "help"      : message_disposition(),
+    "action"    : "store_true"
 }
 
 permutation = {
-    "name"        : "permutation",
-    "shortcut"    : "-p",
-    "command"     : "--permutation",
-    "help"        : message_permutation(),
-    "action"      : "store_true"
+    "name"      : "permutation",
+    "shortcut"  : "-p",
+    "command"   : "--permutation",
+    "help"      : message_permutation(),
+    "action"    : "store_true"
 }
 
 alphabet = {
-    "command"     : "--alphabet",
-    "require"     : True,
-    "help"        : message_alphabet()
+    "command"   : "--alphabet",
+    "require"   : True,
+    "help"      : message_alphabet()
 }
 
 password = {
-    "name"        : "password",
-    "nargs"       : "?",
-    "help"        : message_password()
+    "name"      : "password",
+    "nargs"     : "?",
+    "help"      : message_password()
 }
 
 parser = argparse.ArgumentParser()
@@ -65,7 +65,7 @@ parser.add_argument(
            version[ "shortcut" ],
            version[ "command" ],
   action = version[ "action" ],
- version = version[ "description" ]
+ version = version[ "script" ]
 )
 
 parser.add_argument(
