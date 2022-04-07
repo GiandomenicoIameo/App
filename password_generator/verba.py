@@ -1,9 +1,5 @@
-from pyswip import Prolog
 from parsing import *
 from predicates import *
-
-prolog = Prolog()
-prolog.consult( "combinatorics.pro" )
 
 match True:
   case args.binomial:
@@ -25,6 +21,5 @@ if bool( args.word ) == False:
     )
 else:
     password_not_found(
-        mode, alphabet,
-        args, prolog
+        mode, alphabet
     )
