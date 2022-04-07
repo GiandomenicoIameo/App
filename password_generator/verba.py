@@ -17,7 +17,9 @@ alphabet = list( args.alphabet )
 
 if bool( args.word ):
     password_found(
-        mode, alphabet )
+        mode, alphabet
+    )
 else:
     password_not_found(
-        mode, alphabet )
+        mode, alphabet
+    )
