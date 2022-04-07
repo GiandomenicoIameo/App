@@ -7,20 +7,19 @@ prolog.consult( "combinatorics.pro" )
 
 match True:
   case args.binomial:
-        combinatorics = "binomial"
+        mode = "binomial"
   case args.combination:
-        combinatorics = "combination"
+        mode = "combination"
   case args.disposition:
-        combinatorics = "disposition"
+        mode = "disposition"
   case args.permutation:
-        combinatorics = "permutation"
+        mode = "permutation"
   case _:
-        combinatorics = "permutation"
+        mode = "permutation"
 
 alphabet = list( args.alphabet )
 
 if bool( args.word ) == False:
-    password_found( combinatorics, alphabet )
+    password_found( mode, alphabet )
 else:
-    password_not_found( combinatoric,
-            alphabet, args, prolog )
+    password_not_found( mode, alphabet, args, prolog )
