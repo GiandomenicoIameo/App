@@ -18,10 +18,11 @@ def password_not_found( mode, alphabet, args, prolog ):
 
     toString = list( args.word.strip() )
     separator = ","
-    toString = separator.join( toString )
+    toString = topics.join( toString )
     toString = "[" + toString + "]"
+    schedule = [ str( alphabet ), mode, toString ]
 
-    query = "init( " + str( alphabet ) + "," + mode + "," + toString + ",Ys )"
+    query = "init( " + separator.join( schedule ) + ",Ys )"
 
     for element in prolog.query( query ):
             print( element[ "Ys" ] )
