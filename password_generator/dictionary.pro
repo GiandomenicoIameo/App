@@ -1,0 +1,1 @@
+../../library/swi-prolog/combinatory_logic/dictionary.pro

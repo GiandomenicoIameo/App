@@ -1,4 +1,4 @@
-:- include( '../../library/swi-prolog/combinatory_logic/dictionary.pro' ).
+:- include( 'dictionary.pro' ).
 
 remove_atom( [], [] ).
 remove_atom( [ X|Xs ], [ X|Ys ] ) :- var( X ),
