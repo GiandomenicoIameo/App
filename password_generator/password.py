@@ -1,6 +1,5 @@
 from pyswip import Prolog, Functor, Variable, Query
 from parsing import args
-from construct import plasma_predicate
 
 def combinations( mode ):
 
@@ -32,13 +31,27 @@ def password_not_found( mode, alphabet ):
           print( Y.value )
     query.closeQuery()
 
+def toString( passphrase ):
+
+    password = list( passphrase.strip() )
+    separator = ","
+    password = "[" + separator.join( password ) + "]"
+
+    return password
+
 def password_found( mode, alphabet ):
 
     prolog = Prolog()
     prolog.consult( "predicates.pro" )
 
-    schedule = plasma_predicate( mode, alphabet )
+    alphabet = str( alphabet )
+    password = toString( args.password )
     separator = ","
+
+    schedule = [
+        alphabet, mode,
+        password, "Ys"
+    ]
     query = "generate( " + separator.join( schedule ) + ")"
 
     for element in prolog.query( query ):
