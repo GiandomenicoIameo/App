@@ -1,7 +1,7 @@
 from pyswip import Prolog, Functor, Variable, Query
-from parsing import *
+from parsing import args
 
-def combinatorial_password( mode ):
+def combinations( mode ):
 
     alphabet = list( args.alphabet )
 
