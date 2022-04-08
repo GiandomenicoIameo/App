@@ -37,10 +37,7 @@ def password_found( mode, alphabet ):
     prolog = Prolog()
     prolog.consult( "predicates.pro" )
 
-    schedule = plasma_predicate(
-                    mode, alphabet
-                )
-
+    schedule = plasma_predicate( mode, alphabet )
     separator = ","
     query = "generate( " + separator.join( schedule ) + ")"
 
