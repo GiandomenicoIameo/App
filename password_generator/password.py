@@ -17,7 +17,7 @@ def combinations( mode ):
 def password_not_found( mode, alphabet ):
 
     prolog = Prolog()
-    prolog.consult( "combinatorics.pro" )
+    prolog.consult( "predicates.pro" )
 
     mode = Functor( mode, 2 )
     atom = Functor( "atomic_list_concat", 2 )
@@ -34,7 +34,7 @@ def password_not_found( mode, alphabet ):
 def password_found( mode, alphabet ):
 
     prolog = Prolog()
-    prolog.consult( "combinatorics.pro" )
+    prolog.consult( "predicates.pro" )
 
     toString = list( args.password.strip() )
     separator = ","
