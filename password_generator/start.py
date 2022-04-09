@@ -2,10 +2,10 @@ from password import combinations
 from parsing import args
 
 if args.binomial:
-    combinations( "generate_binomial" )
+    combinations( "binomial_generate" )
 elif args.combination:
-    combinations( "combination" )
+    combinations( "combination_generate" )
 elif args.disposition:
-    combinations( "generate_permutation" )
+    combinations( "disposition_generate" )
 else:
     combinations( "permutation" )
