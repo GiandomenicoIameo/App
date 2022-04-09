@@ -1,1 +1,0 @@
-../../library/swi-prolog/combinatory_logic/combinatorics.pro
