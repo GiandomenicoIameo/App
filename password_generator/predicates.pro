@@ -21,13 +21,13 @@ permutation( [ X|_ ], Acc, [ X|Ys ] ) :- delete( X, Acc, Zs ),
 permutation( Zs, Zs, Ys ).
 permutation( [ _|Xs ], Acc, Ys ) :- permutation( Xs, Acc, Ys ).
 
-combination_generate( Xs, X ) :- element( Xs, Ns ),
+generate_combination( Xs, X ) :- element( Xs, Ns ),
 combination( Xs, X, Ns ).
 
-binomial_generate( Xs, Zs ) :- sort( Xs, Ys ),
+generate_binomial( Xs, Zs ) :- sort( Xs, Ys ),
 binomial( Ys, Zs ).
 
-disposition_generate( Xs, Ys ) :- permutation( Xs, Xs, Ys ).
+generate_disposition( Xs, Ys ) :- permutation( Xs, Xs, Ys ).
 
 remove_nonvar( [], [] ).
 remove_nonvar( [ X|Xs ], [ X|Ys ] ) :- var( X ),
